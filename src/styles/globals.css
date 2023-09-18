@@ -1,0 +1,1432 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  line-height: 1;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+  width: 100%;
+}
+input[type="text"],
+select,
+button {
+  appearance: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+input {
+  outline: none;
+}
+input:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+button {
+  border: 0;
+  cursor: pointer;
+  margin:0;
+  padding:0;
+}
+a,
+a:link {
+  text-decoration: none;
+  color: #333333;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 25px;
+  background-color: #ffffff;
+}
+header img.logo {
+  width: 180px;
+}
+header .btnBox {
+  display: flex;
+  gap: 5px;
+}
+header .btnBox button {
+  width: 30px;
+  height: 50px;
+}
+header .btnBack button.back {
+  background: url('/images/header/icon_back.png') center / 14px no-repeat;
+}
+header .btnBox button.close {
+  background: url('/images/header/icon_close.png') center / 14px no-repeat;
+}
+header .btnBox button.home {
+  background: url('/images/header/icon_home.png') center / 17px no-repeat;
+}
+header .btnBox button.refresh {
+  background: url('/images/header/icon_refresh.png') center / 21px no-repeat;
+}
+header .btnBox button.more {
+  background: url('/images/header/icon_more.png') center / 17px no-repeat;
+}
+header .btnBox button.share {
+  background: url('/images/header/icon_share.png') center / 15px no-repeat;
+}
+
+
+header .btnBack {
+  
+}
+header .btnBack button {
+  background: url('/images/header/icon_back.png') left / 17px no-repeat;
+  padding-left: 25px;
+  height: 50px;
+}
+/* 메인 스탬프 */
+.stamp_box {
+  background: url('/images/main/stamp_back.png') bottom / cover no-repeat;
+  border-top: 1px solid #d8dadc;
+  padding: 25px 35px 10px;
+}
+.stamp_box .title {
+  font-family:inaviL;
+  font-size: 17px;
+  color:#010101;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.stamp_box .title .myStamp {
+  width:6px;
+  height:11px;
+  position: relative;
+  top: -1px;
+  left: 6px;
+}
+.stamp_box .title .count {
+  border:1px solid #dadcde;
+  border-radius: 20px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stamp_box .title .count em {
+  font-family: arialRound;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 1;
+}
+.stamp_box .title .count em:first-child {
+  color:#c86550;
+}
+.stamp_box .title .count em:last-child {
+  color:#a6b4c0;
+}
+.stamp_box .title .count img {
+  width:3px;
+  margin:0 4px;
+}
+.stamp_box .title .restart {
+  border:1px solid #cb6e5b;
+  border-radius: 20px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stamp_box .title .restart img {
+  width: 13px;
+  margin-right: 5px;
+}
+.stamp_box .title .restart p {
+  font-size: 12px;
+  color:#c86550;
+  font-family: inaviB;
+}
+.stamp_box ul.stamp_list {
+  --main-width: calc(100vw - 70px);
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+.stamp_box ul.stamp_list li {
+  float: left;
+  width: 47px;
+  margin-left: calc(25% - 59px);
+  margin-bottom: 15px;
+  position: relative;
+}
+.stamp_box ul.stamp_list li .line {
+  text-indent: -9999px;
+  background: url('/images/main/dotdot.png') 0 0 / 5px repeat-x;
+  width: calc((var(--main-width) - 215px) / 4);
+  height:3px;
+  position: absolute;
+  top: 22px;
+  right: 43px;
+}
+.stamp_box ul.stamp_list li .line.completeLine {
+  background: #c86550;
+  padding-left: 2px;
+  box-sizing: content-box;
+  top: 23px;
+  height:2px;
+}
+
+.stamp_box ul.stamp_list li .box {
+  position: relative;
+}
+
+.stamp_box ul.stamp_list li:nth-child(5n-4) {
+  margin-left: 0;
+}
+.stamp_box ul.stamp_list li:nth-child(5n-4) .line {
+  display: none;
+}
+.stamp_box ul.stamp_list li .box img.round {
+  width: 100%;
+  position: relative;
+}
+.stamp_box ul.stamp_list li .box img.gift {
+  width: 25px;
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.stamp_box ul.stamp_list li .box span {
+  font-family:inaviB;
+  font-size: 13px;
+  color:#b8bcc1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.stamp_box .paging {
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family:inaviM;
+  text-align: center;
+  position: relative;
+  bottom: 5px;
+}
+
+/* 헤더 */
+header .head_back .back_box {
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 25px;
+  vertical-align: top;
+}
+header .head_back .back_box img {
+  width: 17px;
+  margin-right: 15px;
+  position: relative;
+  top: 1px;
+}
+header .head_back span {
+  font-size: 14px;
+  color:#000;
+  font-family:inaviM;
+  display: inline-block;
+  width: calc(100% - 80px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* 선물 메인 */
+.main_gift_swiper .swiper {
+  width: 100%;
+}
+.main_gift_swiper .swiperbut {
+  padding-bottom:10px!important;
+}
+.main_gift_swiper .swiper-pagination-bullet {
+  width:4px!important;
+  height:4px!important;
+  background:#333!important;
+}
+.main_gift_swiper .swiper-pagination-bullet-active {
+  background:#333!important;
+}
+.main_gift_swiper .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 2px!important;
+}
+.main_gift_swiper .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom:0px!important;
+}
+.main_gift_swiper .swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  position: relative!important;
+  object-fit: contain;
+}
+
+/* 추천 스탬프 */
+.recom_stamp {
+  padding: 10px 25px;
+}
+.recom_stamp .title {
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding-top: 6px;
+}
+.recom_stamp .title h1 {
+  float: left;
+  font-size: 14px;
+  font-weight: normal;
+  color:#000000;
+  font-family:inaviM;
+}
+.recom_stamp .title h1 img {
+  width:15px;
+  position: relative;
+  top: 1px;
+}
+.recom_stamp .title span {
+  font-size: 11px;
+  color:#3bb9fa;
+  border: 1px solid #3bb9fa;
+  float: right;
+  font-family:inaviB;
+  padding: 5px 10px;
+  position: relative;
+  top: -5px;
+}
+.recom_stamp .title span img {
+  width: 5px;
+}
+.recom_stamp .test .simg {
+  width:100%;
+  margin-bottom:10px;
+}
+.recom_stamp .test .backImg {
+  width:100%;
+  height: 25vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom:10px;
+}
+
+/* 사진 간격
+.recom_stamp .test:nth-child(2n+1) {
+  margin-right: 10px;
+} */
+
+.recom_stamp .test h2 {
+  font-family:inaviL;
+  font-size: 14px;
+  color:#010101;
+  line-height: 16px;
+  font-weight: normal;
+  /* word-break: keep-all; */
+}
+.recom_stamp .test p {
+  font-family:inaviL;
+  font-size: 12px;
+  color:rgba(1, 1, 1, 0.5);
+  line-height: 15px;
+  margin-top: 2px;
+}
+.recom_stamp .test .stamp_count {
+  margin-top:6px;
+}
+.recom_stamp .test img.stamp {
+  width:10px;
+  /* position: relative;
+  top: 2px; */
+  margin-right: 4px;
+}
+.recom_stamp .test .stxt {
+  font-family:inaviM;
+  font-size: 12px;
+  color:rgba(1, 1, 1, 0.5);
+  display: inline-block;
+  border-right: 1px solid #cccccc;
+  padding-right: 7px;
+  line-height: 7px;
+  margin-right: 7px;
+}
+.recom_stamp .test .snum {
+  font-size: 12px;
+  color:#c86550;
+  font-family: arialRound;
+}
+.recom_stamp .test .ns_mark {
+  font-family:inaviB;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  color:#fff;
+  background:#835fa1;
+  padding:4px 8px;
+}
+
+
+.gift_box {
+  background: url('/images/main/gift_back.png') center / cover no-repeat;
+  font-family:inaviM;
+  text-align: center;
+  padding:12px 0;
+}
+.gift_box .gift_price {
+  display: inline-block;
+  font-size: 12px;
+  color:#000;
+  padding:0 5px;
+}
+.gift_box button.view {
+  display: inline-block;
+  color:#3bb9fa;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* 코스 메인 (인기순, 거리순, 이름순) */
+
+.course_box .sort {
+    background: #faf7f1;
+    height:50px;
+    padding:12px 25px;
+}
+.course_box .sort span {
+    display: inline-block;
+    font-size: 12px;
+    color:#d0a287;
+    font-family:inaviM;
+    padding:6px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+@media screen and (max-width: 320px) {
+    .course_box .sort span {
+        padding:6px 10px;
+    }
+}
+.course_box .sort span.on {
+    color:#c86550;
+    background:#fbe6d3;
+
+}
+.course_box .sort .complete_hide {
+    float: right;
+}
+.course_box .sort .complete_hide label {
+    font-size: 12px;
+    color:#d0a287;
+    
+}
+.course_box .sort .complete_hide {
+    position: relative;
+    background-color: #faf7f1;
+    margin-top: 1px;
+}
+.course_box .sort .complete_hide input[type="checkbox"] {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     padding: 0;
+     margin: -1px;
+     overflow: hidden;
+     border: 0;
+}
+.course_box .sort .complete_hide input[type="checkbox"] + label {
+     display: inline-block;
+     position: relative;
+     padding-left: 16px;
+     cursor: pointer;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+}
+.course_box .sort .complete_hide input[type="checkbox"] + label:before {
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 1px;
+     width: 10px;
+     height: 10px;
+     text-align: center;
+     background: #faf7f1;
+     border: 1px solid #d0a287;
+     border-radius: 100%;
+}
+.course_box .sort .complete_hide input[type="checkbox"]:checked + label:before {
+    background: #fff;
+    border-color: #fff;
+}
+.course_box .sort .complete_hide input[type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 12px;
+    height: 12px;
+    /* background-image:url('../images/checked2.png'); */
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+    border-radius: 100%;
+}
+.course_box ul.list {
+    background-color: #f6f1e7;
+    padding:17px 15px 55px 25px;
+}
+.course_box ul.list li {
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+.course_box ul.list li:last-child {
+    margin-bottom: 0;
+}
+.course_box ul.list li .box_lt {
+    float: left;
+    width: 66px;
+    height:66px;
+    border-radius: 3px;
+    margin-right: 15px;
+    /* background-image:url('../images/dummy_img/img_3.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+}
+.course_box ul.list li .box_lt .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+.course_box ul.list li .box_lt img.p_icon {
+    width: 27px;
+    z-index: 2;
+    position: absolute;
+    top: 11px;
+    left: 19px;
+}
+.course_box ul.list li .box_lt img.c_icon {
+    width: 47px;
+    z-index: 2;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+}
+.course_box ul.list li .box_lt span {
+    color:#fff;
+    font-size: 12px;
+    font-family: arialRound;
+    display: inline-block;
+    background:rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    border-radius: 0 0 3px 3px;
+}
+.course_box ul.list li .box_rt {
+    float: left;
+    width: calc(100% - 81px);
+    height: 78px;
+    position: relative;
+}
+.course_box ul.list li .box_rt h2 {
+    font-family:inaviL;
+    font-size: 14px;
+    color:#010101;
+    line-height: 16px;
+    font-weight: normal;
+    width: calc(100% - 60px);
+    word-break: keep-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.course_box ul.list li .box_rt p {
+    font-family:inaviL;
+    font-size: 12px;
+    color:rgba(1, 1, 1, 0.5);
+    line-height: 15px;
+    margin-top: 3px;
+}
+.course_box ul.list li .box_rt p .star {
+    vertical-align: middle;
+    color: #cc705c;
+    font-size: 12px;
+    line-height: 1;
+}
+.course_box ul.list li .box_rt p .star img {
+    margin-left: 10px;
+    width: 12px;
+    vertical-align: top;
+}
+.course_box ul.list li .box_rt .stamp_count {
+    margin-top:5px;
+}
+@media screen and (max-width: 320px) {
+    .course_box ul.list li .box_rt p .star {
+        display: block;
+        line-height: 1;
+    }
+    .course_box ul.list li .box_rt p .star img {
+        margin-left: 0;
+        vertical-align: top;
+    }
+    .course_box ul.list li .box_rt .stamp_count {
+        margin-top: 0;
+    }
+}
+.course_box ul.list li .box_rt img.stamp {
+    width:10px;
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+}
+.course_box ul.list li .box_rt .stxt {
+    font-family:inaviM;
+    font-size: 12px;
+    color:rgba(1, 1, 1, 0.5);
+    display: inline-block;
+    border-right: 1px solid #cccccc;
+    padding-right: 7px;
+    line-height: 7px;
+    margin-right: 7px;
+}
+.course_box ul.list li .box_rt .snum {
+    font-size: 12px;
+    color:#c86550;
+    font-family: arialRound;
+}
+.course_box ul.list li .box_rt .cycle {
+    display: inline-block;
+    width:44px;
+    height:15px;
+    line-height: 14px;
+    border: 1px solid #c86550;
+    border-radius: 15px;
+    text-align: center;
+    color:#c86550;
+    font-size: 9px;
+    box-sizing: content-box;
+    margin-left: 12px;
+    position: relative;
+    bottom: 1px;
+}
+
+.course_box ul.list li .box_rt .position {
+    text-indent: -9999px;
+    width: 35px;
+    height: 35px;
+    /* background-image: url('../images/stamp_press.png'); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.course_box ul.list li .box_rt .position.press {
+    /* background-image: url('../images/stamp_press.png'); */
+}
+.course_box ul.list li .box_rt .position.nfc {
+    /* background-image: url('../images/stamp_nfc.png'); */
+}
+
+.course_box ul.list li .box_rt .stamp_badge {
+    width:56px;
+    height:56px;
+    background:#fff;
+    border-radius: 5px;
+    position: absolute;
+    right:0;
+    top: 0;
+}
+.course_box ul.list li .box_rt .stamp_badge img {
+    width:50px;
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+
+.course_box ul.list li .box_rt .progress_box {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+}
+.course_box ul.list li .box_rt .progress_box .p_back {
+    float: left;
+    width:calc(100% - 40px);
+    height:2px;
+    background-color: #d1e6eb;
+    margin:8px 0;
+    position: relative;
+}
+.course_box ul.list li .box_rt .progress_box .p_back .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:2px;
+    background-color: #3bb9fa;
+}
+.course_box ul.list li .box_rt .progress_box span {
+    float: left;
+    width:40px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #3bb9fa;
+    color:#fff;
+    text-align: center;
+    font-size: 12px;
+    font-family: arialRound;
+    border-radius: 2px;
+
+}
+.tour_sub_wrap .desc_box {
+  padding: 10px 25px 35px;
+}
+.tour_sub_wrap .desc_box p {
+  font-size: 12px;
+  font-family:inaviL;
+  color:#000;
+  line-height: 18px;
+  margin-bottom:10px;
+  word-break: keep-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.tour_sub_wrap .desc_box span {
+  font-size: 12px;
+  font-family:inaviB;
+  color:#c86550;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 18px;
+}
+
+
+
+.tour_sub_wrap .sur_place {
+  margin-bottom: 30px;
+}
+.tour_sub_wrap .sur_place .title {
+  overflow: hidden;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #000;
+  margin: 0 0 11px 25px;
+}
+.tour_sub_wrap .sur_place .title h1 {
+  float: left;
+  font-size: 14px;
+  font-weight: normal;
+  color:#000000;
+  font-family:inaviM;    
+}
+.tour_sub_wrap .sur_place .title h1 img {
+  width:15px;
+  position: relative;
+  top: 2px;
+  margin-right: 6px;
+}
+.tour_sub_wrap .sur_place .title span {
+  font-size: 11px;
+  color:rgba(0, 0, 0, 0.5);
+  float: right;
+  margin-top: 3px;
+  font-family:inaviM;
+  position: relative;
+  right: 25px;
+}
+.tour_sub_wrap .sur_place .title span img {
+  width:5px;
+  margin-left: 3px;
+  
+}
+.tour_sub_wrap .sur_place ul.list {
+  overflow: hidden;
+  padding: 0 25px;
+}
+.tour_sub_wrap .sur_place ul.list li {
+  float: left;
+  width:calc(50% - 5px);
+  position: relative;
+}
+.tour_sub_wrap .sur_place ul.list li .backImg {
+  width:100%;
+  height: 25vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom:10px;
+}
+.tour_sub_wrap .sur_place ul.list li:first-child {
+  margin-right: 10px;
+}
+.tour_sub_wrap .sur_place ul.list li h2 {
+  font-family:inaviL;
+  font-size: 14px;
+  color:#010101;
+  line-height: 15px;
+  font-weight: normal;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.tour_sub_wrap .sur_place ul.list li p {
+  font-family:inaviL;
+  font-size: 12px;
+  color:rgba(1, 1, 1, 0.5);
+  line-height: 15px;
+  margin-top: 2px;
+}
+
+.tour_sub_wrap .service_info ul.servie_list {
+  padding-right: 25px;
+  padding-bottom: 30px;
+}
+.tour_sub_wrap .service_info ul.servie_list li {
+  font-size: 14px;
+  color:#000;
+  font-family:inaviM;
+  cursor: pointer;
+  padding:13px 0;
+  background-image: url('/images/tour/arrow_2.png');
+  background-repeat: no-repeat;
+  background-size: 7px;
+  background-position: top 15px right 0px;
+}
+
+
+/*============================================
+
+               관광 리스트 페이지
+
+=============================================*/
+
+.tour_sub_wrap ul.view_list {
+  overflow: hidden;
+  padding: 25px 25px 50px;
+}
+.tour_sub_wrap ul.view_list li {
+  float: left;
+  width:calc(33.3% - 8px);
+  position: relative;
+  margin-right: 12px;
+  margin-bottom: 20px;
+}
+.tour_sub_wrap ul.view_list li img {
+  width:100%;
+  margin-bottom:10px;
+}
+.tour_sub_wrap ul.view_list li .back_img {
+  width:100%;
+  height:100px;
+  margin-bottom:10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.tour_sub_wrap ul.view_list li:nth-child(3n) {
+  margin-right: 0;
+}
+.tour_sub_wrap ul.view_list li h2 {
+  font-family:inaviL;
+  font-size: 14px;
+  color:#010101;
+  line-height: 15px;
+  font-weight: normal;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.tour_sub_wrap ul.view_list li p {
+  font-family:inaviL;
+  font-size: 12px;
+  color:rgba(1, 1, 1, 0.5);
+  line-height: 15px;
+  margin-top: 2px;
+}
+.tour_sub_wrap.back_gray {
+  background-color: #f7f8f9;
+  padding-bottom: 0;
+  height: calc(100vh - 50px);
+}
+.tour_sub_wrap .service_info {
+  margin: 30px 0 0 25px;
+  border-top: 1px solid #000;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: top 0 left 3px;
+}
+.tour_sub_wrap .service_info.type1 {
+  background-image: url('/images/tour/icon_1.png');
+}
+.tour_sub_wrap .service_info.type2 {
+  background-image: url('/images/tour/icon_2.png');
+}
+.tour_sub_wrap .service_info.type3 {
+  background-image: url('/images/tour/icon_3.png');
+}
+.tour_sub_wrap .service_info.type4 {
+  background-image: url('/images/tour/icon_3.png');
+}
+.tour_sub_wrap .service_info .title {
+  margin: 18px 0 20px;
+  font-family: inaviL;
+  font-size: 17px;
+  color: #000;
+}
+.tour_sub_wrap .service_info .title span {
+  font-size: 11px;
+  display: inline-block;
+  padding-right: 25px;
+  line-height: 1.3;
+  margin-top: 3px;
+  color:#666;
+}
+
+/*============================================
+
+                 주변 관광 정보 페이지
+
+=============================================*/
+
+.tour_sub_wrap .desc_box {
+  padding: 10px 25px 35px;
+}
+.tour_sub_wrap .desc_box p {
+  font-size: 12px;
+  font-family:inaviL;
+  color:#000;
+  line-height: 18px;
+  margin-bottom:10px;
+  word-break: keep-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.tour_sub_wrap .desc_box span {
+  font-size: 12px;
+  font-family:inaviB;
+  color:#c86550;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 18px;
+}
+
+
+
+.tour_sub_wrap .sur_place {
+  margin-bottom: 30px;
+}
+.tour_sub_wrap .sur_place .title {
+  overflow: hidden;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #000;
+  margin: 0 0 11px 25px;
+}
+.tour_sub_wrap .sur_place .title h1 {
+  float: left;
+  font-size: 14px;
+  font-weight: normal;
+  color:#000000;
+  font-family:inaviM;    
+}
+.tour_sub_wrap .sur_place .title h1 img {
+  width:15px;
+  position: relative;
+  top: 2px;
+  margin-right: 6px;
+}
+.tour_sub_wrap .sur_place .title span {
+  font-size: 11px;
+  color:rgba(0, 0, 0, 0.5);
+  float: right;
+  margin-top: 3px;
+  font-family:inaviM;
+  position: relative;
+  right: 25px;
+}
+.tour_sub_wrap .sur_place .title span img {
+  width:5px;
+  margin-left: 3px;
+  
+}
+.tour_sub_wrap .sur_place ul.list {
+  overflow: hidden;
+  padding: 0 25px;
+}
+.tour_sub_wrap .sur_place ul.list li {
+  float: left;
+  width:calc(50% - 5px);
+  position: relative;
+}
+.tour_sub_wrap .sur_place ul.list li .backImg {
+  width:100%;
+  height: 25vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom:10px;
+}
+.tour_sub_wrap .sur_place ul.list li:first-child {
+  margin-right: 10px;
+}
+.tour_sub_wrap .sur_place ul.list li h2 {
+  font-family:inaviL;
+  font-size: 14px;
+  color:#010101;
+  line-height: 15px;
+  font-weight: normal;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.tour_sub_wrap .sur_place ul.list li p {
+  font-family:inaviL;
+  font-size: 12px;
+  color:rgba(1, 1, 1, 0.5);
+  line-height: 15px;
+  margin-top: 2px;
+}
+
+.tour_sub_wrap .service_info ul.servie_list {
+  padding-right: 25px;
+  padding-bottom: 30px;
+}
+.tour_sub_wrap .service_info ul.servie_list li {
+  font-size: 14px;
+  color:#000;
+  font-family:inaviM;
+  cursor: pointer;
+  padding:13px 0;
+  background-image: url('/images/tour/arrow_2.png');
+  background-repeat: no-repeat;
+  background-size: 7px;
+  background-position: top 15px right 0px;
+}
+
+
+/*============================================
+
+               관광 리스트 페이지
+
+=============================================*/
+
+.tour_sub_wrap ul.view_list {
+  overflow: hidden;
+  padding: 25px 25px 50px;
+}
+.tour_sub_wrap ul.view_list li {
+  float: left;
+  width:calc(33.3% - 8px);
+  position: relative;
+  margin-right: 12px;
+  margin-bottom: 20px;
+}
+.tour_sub_wrap ul.view_list li img {
+  width:100%;
+  margin-bottom:10px;
+}
+.tour_sub_wrap ul.view_list li .back_img {
+  width:100%;
+  height:100px;
+  margin-bottom:10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.tour_sub_wrap ul.view_list li:nth-child(3n) {
+  margin-right: 0;
+}
+.tour_sub_wrap ul.view_list li h2 {
+  font-family:inaviL;
+  font-size: 14px;
+  color:#010101;
+  line-height: 15px;
+  font-weight: normal;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.tour_sub_wrap ul.view_list li p {
+  font-family:inaviL;
+  font-size: 12px;
+  color:rgba(1, 1, 1, 0.5);
+  line-height: 15px;
+  margin-top: 2px;
+}
+.tour_sub_wrap.back_gray {
+  background-color: #f7f8f9;
+  padding-bottom: 0;
+  height: calc(100vh - 50px);
+}
+
+/*============================================
+
+               참가자 보기 페이지
+
+=============================================*/
+.tour_sub_wrap ul.my_info {
+  background-color: #faf7f1
+}
+.tour_sub_wrap ul.my_info li {
+  padding:15px 20px 15px 25px;
+  display: flex;
+  align-items: center;
+}
+.tour_sub_wrap .member_list_tab {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 13px;
+  background-color: #fff;
+  text-align: center;
+}
+.tour_sub_wrap .member_list_tab li {
+  /* display: inline-block; */
+  vertical-align: middle;
+  font-size: 12px;
+  padding: 7px 15px;
+  color: #d0a287;
+  border-radius: 14px;
+}
+.tour_sub_wrap .member_list_tab li:first-child {
+  margin-right: 3px;
+}
+.tour_sub_wrap .member_list_tab li.active {
+  color: #c86550;
+  background-color: #ffecde;
+
+}
+.tour_sub_wrap ul.user_list {
+  background-color: #f7f8f9;
+  padding-bottom: 65px;
+}
+.tour_sub_wrap ul.user_list li {
+  border-bottom: 1px solid #edeeef;
+  display: flex;
+  align-items: center;
+  padding:15px 20px 15px 25px;
+}
+.tour_sub_wrap ul.user_list li .user_img,
+.tour_sub_wrap ul.my_info li .user_img {
+  /* float: left; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 13px;
+  /* background-image: url('../images/default.png'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.tour_sub_wrap ul.user_list li > p,
+.tour_sub_wrap ul.my_info li > p {
+  /* float: left; */
+  font-family:inaviL;
+  font-size: 14px;
+  color:#010101;
+  width: calc(100% - 150px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.tour_sub_wrap ul.my_info li > p span {
+  display: block;
+  color: #c86550;
+  margin-top: 5px;
+}
+/* .tour_sub_wrap ul li .badge_count {
+  float: right;
+} */
+.tour_sub_wrap ul li .badge_count p {
+  width: 90px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  text-align: right;
+}
+.tour_sub_wrap ul li .badge_count p.finish {
+  margin-top: 10px;
+}
+.tour_sub_wrap ul li .badge_count p span {
+  padding-left: 18px;
+  height: 13px;
+  color: rgba(0,0,0,0.5);
+  line-height: 1;
+}
+.tour_sub_wrap ul li .badge_count p strong {
+  color: #c86550;
+  font-size: 13px;
+  font-family: inaviEB;
+  font-weight: normal;
+}
+.tour_sub_wrap ul li .badge_count p.stamp span {
+  /* background: url('../images/star.png') left center / 13px no-repeat; */
+}
+.tour_sub_wrap ul li .badge_count p.finish span {
+  /* background: url('../images/flag.png') left center / 13px no-repeat; */
+}
+.swiper-pagination {
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family:inaviM;
+  text-align: center;
+  position: relative;
+  bottom: 5px;
+}
+
+#echossStampLayer {
+  z-index: 100;
+  position: fixed!important;
+}
+
+/* 권역별 스타일 추가 */
+.area_box {
+  background: #faf7f1;
+  padding: 5px 25px 12px;
+}
+.area_box select {
+  width:100%;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-family: inaviM;
+  color: #c86550;
+  border-radius: 5px;
+  border: 1px solid #d0a287;
+  position: relative;
+  /* background-image: url('../images/sd_arrow.png'); */
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: top 10px right 10px;
+  padding-right: 30px;
+}
+.area_box select option {
+  width:200px;
+  font-size: 12px;
+  font-family: inaviM;
+  color: #c86550;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* go_top */
+.go_top {position:fixed; left:50%; margin-left: -62px; bottom:18px; cursor:pointer; z-index:99;}
+.go_top img {width:124px;}
+
+/* 개인정보 */
+.person_pop {
+  display: none;
+  width: 274px;
+  background: #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -130px 0 0 -137px;
+  padding: 10px;
+  text-align: left;
+}
+.person_pop .title {
+  font-size: 14px;
+  font-family:inaviM;
+  text-align: center;
+  margin-bottom:10px;
+  color:#000;
+}
+.person_pop .ptxt {
+  font-size: 13px;
+  font-family:inaviL;
+  color:#000;
+  line-height: 1.4;
+}
+.person_pop .ptxt .cont {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.person_pop .ptxt .cont .nodata {
+  line-height: 1.6;
+  color:#999;
+  cursor: pointer;
+}
+.person_pop .ptxt .cont .data {
+  color:#000;
+}
+.person_pop .ptxt .cont .phone {
+  margin:0 3px;
+}
+.person_pop .ptxt .agree {
+  text-align: center;
+  margin-top: 7px;
+}
+.person_pop .ptxt .agree span {
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  line-height: 24px;
+  background: #c86550;
+  color:#fff;
+  border-radius: 4px;
+  margin: 0 3px;
+}
+.person_pop .ptxt .agree span.btn {
+  opacity: .4;
+}
+.person_pop .ptxt .agree span.on {
+  opacity: 1;
+  cursor: pointer;
+}
+.stamp_success h3 {
+  margin-bottom: 5px;
+}
+.stamp_success .tal {
+  display: inline-block;
+  text-align: left;
+}
+.giftDday {
+  position: absolute;
+  bottom: 0;
+  left: 47px;
+  font-size: 11px;
+  color: #c86550;
+  font-family:inaviL;
+  line-height: 1;
+}
+
+/* 투어 디테일 슬라이드 */
+.stampSwiper .swiper {
+  width:100%;
+  position: relative;
+}
+.stampSwiper .swiper .slide {
+  width:100%;
+  height: 55vw;
+  max-height: 320px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}
+.stampSwiper .swiper .slidePoi {
+  width:100%;
+  height: 55vw;
+  max-height: 320px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 100;
+}
+.stampSwiper .swiper-pagination {
+  width:40px;
+  height:20px;
+  line-height:20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: 11px;
+  color: #fff;
+  font-family: inaviM;
+  text-align: center;
+  position: absolute;
+  bottom: 11px;
+  right: 12px;
+  left: auto;
+}
+.tour_sub_wrap .service_info .info h3 {
+  font-weight: normal;
+  font-size: 14px;
+  color:#000;
+  font-family: inaviM;
+  margin-bottom: 10px;
+}
+.tour_sub_wrap .service_info .info p {
+  display: block;
+  font-size: 12px;
+  font-family: inaviL;
+  line-height: 18px;
+  /* padding-left: 12px; */
+}
+.tour_sub_wrap .service_info.type1 .info .ptxt {
+  margin-bottom: 1px;
+  color:#000;
+}
+.tour_sub_wrap .service_info.type2 .info .ptxt {
+  margin-bottom: 1px;
+  color:#000;
+}
+.tour_sub_wrap .service_info.type3 .info .ptxt {
+  color:#000;
+  padding-left: 0;
+}
+.tour_sub_wrap .service_info.type2 .info .ptxt strong {
+  color:#c86550;
+  font-weight: normal;
+}
+.tour_sub_wrap .service_info.type3 .info .ptxt span {
+  color:rgba(0, 0, 0, 0.5);
+}
