@@ -6,7 +6,7 @@ import { useState } from "react";
 const Home = () => {
   const [totalPages, setTotalPages] = useState(0);
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <Head>
         <title>영화 검색</title>
         <link rel="icon" href="/favicon.ico" />

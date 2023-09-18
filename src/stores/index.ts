@@ -1,3 +1,3 @@
-import * as commonStore from "@/stores/common";
+import * as searchStore from "@/stores/searchStore";
 
-export { commonStore };
+export { searchStore };
