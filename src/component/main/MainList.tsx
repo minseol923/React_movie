@@ -4,8 +4,9 @@ import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
 import AttachEmailOutlinedIcon from "@mui/icons-material/AttachEmailOutlined";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";
-import FavoriteMovie from "@/pages/favoriteMovie";
-import SearchMovie from "@/pages/searchMovie";
+import React from "react";
+import FavoriteMovie from "../../pages/favoriteMovie";
+import SearchMovie from "../../pages/searchMovie";
 
 const MainList = (props: any) => {
   const router = useRouter();
@@ -17,7 +18,13 @@ const MainList = (props: any) => {
       <BottomNavigation
         showLabels
         value={value}
-        sx={{ position: "fixed", bottom: 0, width: 1.0 }}
+        sx={{
+          position: "fixed",
+          bottom: 0,
+          width: 1.0,
+          backgroundColor: "lightgray",
+          zIndex: 1,
+        }}
         onChange={(_event, newValue) => {
           setValue(newValue);
         }}

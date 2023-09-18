@@ -18,10 +18,9 @@ import {
 import React, { useState } from "react";
 import { Search, Search as SearchIcon } from "@mui/icons-material";
 import axios from "axios";
-import { searchStore } from "@/stores";
 import { useRecoilState } from "recoil";
-import CustomTable from "@/component/custom/CustomTable";
 import SearchMovieCard from "./searchMovieCard";
+import { searchStore } from "../../stores";
 
 const SearchMovie = () => {
   const [searchMovieResult, setSearchMovieResult] = useRecoilState(

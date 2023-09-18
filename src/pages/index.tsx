@@ -1,7 +1,9 @@
 import Head from "next/head";
-import Header from "@/component/layout/Header";
-import MainList from "@/component/main/MainList";
+import React from "react";
+
 import { useState } from "react";
+import Header from "../component/layout/Header";
+import MainList from "../component/main/MainList";
 
 const Home = () => {
   const [totalPages, setTotalPages] = useState(0);

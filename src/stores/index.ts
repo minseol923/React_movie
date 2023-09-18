@@ -1,3 +1,3 @@
-import * as searchStore from "@/stores/searchStore";
+import * as searchStore from "../stores/searchStore";
 
 export { searchStore };
