@@ -45,17 +45,23 @@ const SearchMovie = () => {
     );
     if (response.data.Response === "True") {
       const resultSearch = response.data.Search;
-
-      console.log("xxxx : resultSearch", resultSearch);
       setSearchMovieResult(resultSearch);
     }
   };
 
   return (
-    <div style={{ justifyContent: "center" }}>
+    <div style={{ justifyContent: "center", position: "relative" }}>
       <Box sx={{ mt: 3, justifyContent: "center" }}>
         <TextField
-          sx={{ width: "70%", marginLeft: "20px", size: "large" }}
+          sx={{
+            width: "70%",
+            marginLeft: "20px",
+            size: "large",
+            position: "sticky",
+            top: "0",
+            zIndex: "1",
+            backgroundColor: "white",
+          }}
           label={"영화를 검색해보세요!"}
           size="small"
           value={searchText}
@@ -73,12 +79,16 @@ const SearchMovie = () => {
           size="medium"
           variant="contained"
           color="primary"
-          sx={{ marginLeft: "10px" }}
+          sx={{
+            marginLeft: "10px",
+            position: "sticky",
+            top: "0",
+            zIndex: "1",
+          }}
           onClick={handleSearchBtnClick}
         >
           검색
         </Button>
-
         <SearchMovieCard />
       </Box>
     </div>
