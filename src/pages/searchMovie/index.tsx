@@ -1,26 +1,11 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-  IconButton,
-  InputAdornment,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
-import React, { useState } from "react";
+import { Box, Button, InputAdornment, TextField } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { Search, Search as SearchIcon } from "@mui/icons-material";
 import axios from "axios";
 import { useRecoilState } from "recoil";
 import SearchMovieCard from "./searchMovieCard";
 import { searchStore } from "../../stores";
+import NoData from "./noData";
 
 const SearchMovie = () => {
   const [searchMovieResult, setSearchMovieResult] = useRecoilState(
@@ -28,6 +13,8 @@ const SearchMovie = () => {
   );
 
   const [pagination, setPagination] = useRecoilState(searchStore.pagination);
+
+  const [responseReulstType, setResponseReulstType] = useState<Boolean>(false);
 
   const textFieldInfo = {
     defaultValue: "",
@@ -43,9 +30,18 @@ const SearchMovie = () => {
     const response = await axios.get(
       `http://www.omdbapi.com/?apikey=92e32667&s=${searchText}&page=${1}`
     );
-    if (response.data.Response === "True") {
+    console.log("response", response);
+
+    if (response.data) {
+      const responseType = response.data.Response;
+      setResponseReulstType(responseType);
       const resultSearch = response.data.Search;
       setSearchMovieResult(resultSearch);
+    }
+    const korean = /[ㄱ-ㅎㅏ-ㅣ가-힣]/;
+    if (korean.test(searchText)) {
+      alert("영어로 검색어를 입력해주세요.");
+      return;
     }
   };
 
@@ -89,7 +85,7 @@ const SearchMovie = () => {
         >
           검색
         </Button>
-        <SearchMovieCard />
+        <SearchMovieCard responseType={responseReulstType} />
       </Box>
     </div>
   );
