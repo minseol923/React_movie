@@ -81,6 +81,7 @@ const ResultCard = ({ search, favorite }: Props) => {
     if (storedFavorites) {
       setFavoriteMovies(storedFavorites);
     }
+    console.log("storedFavorites", favoriteMovies.length);
   }, []);
 
   useEffect(() => {
@@ -178,7 +179,7 @@ const ResultCard = ({ search, favorite }: Props) => {
               )}
           </div>
         )}
-        {favorite && (
+        {favorite && favoriteMovies.length ? (
           <div
             style={{
               display: "grid",
@@ -230,6 +231,17 @@ const ResultCard = ({ search, favorite }: Props) => {
                 </Card>
               );
             })}
+          </div>
+        ) : (
+          <div
+            style={{
+              display: "grid",
+              gap: "10px",
+              justifyContent: "center",
+              marginTop: "40px",
+            }}
+          >
+            즐겨찾는 영화가 없습니다.
           </div>
         )}
 
