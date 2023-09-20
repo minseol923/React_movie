@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { searchStore } from "../../stores";
 import { useDrag, useDrop } from "react-dnd";
+import MovieCard from "./commonCard";
 
 interface Props {
   search?: boolean;
@@ -127,53 +128,12 @@ const ResultCard = ({ search, favorite }: Props) => {
                       favMovie.imdbID === movie.imdbID
                   );
                   return (
-                    <Card
-                      sx={{ maxWidth: "70%" }}
-                      key={index}
-                      onClick={() => clickMovie(movie)}
-                    >
-                      <CardActionArea>
-                        <CardMedia
-                          component="img"
-                          height="400px"
-                          image={movie.Poster}
-                        />
-                        <CardContent>
-                          {isFavorite && (
-                            <Typography
-                              gutterBottom
-                              variant="subtitle1"
-                              component="div"
-                              color={"red"}
-                            >
-                              *즐겨찾는 영화*
-                            </Typography>
-                          )}
-
-                          <Typography
-                            gutterBottom
-                            variant="subtitle1"
-                            component="div"
-                          >
-                            영화 제목 : {movie.Title}
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="subtitle1"
-                            component="div"
-                          >
-                            개봉 년도 : {movie.Year}
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="subtitle1"
-                            component="div"
-                          >
-                            시리즈 : {movie.Type}
-                          </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                    </Card>
+                    <MovieCard
+                    key={index}
+                    movie={movie}
+                    clickMovie={clickMovie}
+                    isFavorite={isFavorite}
+                  />
                   );
                 }
               )}
@@ -193,42 +153,7 @@ const ResultCard = ({ search, favorite }: Props) => {
             {Object.values(favoriteMovies).map((movie: any, index: number) => {
               // 즐겨찾기를 저장한 데이터 확인
               return (
-                <Card
-                  sx={{ maxWidth: "80%" }}
-                  key={index}
-                  onClick={() => clickMovie(movie)}
-                >
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="400px"
-                      image={movie.Poster}
-                    />
-                    <CardContent>
-                      <Typography
-                        gutterBottom
-                        variant="subtitle1"
-                        component="div"
-                      >
-                        영화 제목 : {movie.Title}
-                      </Typography>
-                      <Typography
-                        gutterBottom
-                        variant="subtitle1"
-                        component="div"
-                      >
-                        개봉 년도 : {movie.Year}
-                      </Typography>
-                      <Typography
-                        gutterBottom
-                        variant="subtitle1"
-                        component="div"
-                      >
-                        시리즈 : {movie.Type}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
+                <MovieCard key={index} movie={movie} clickMovie={clickMovie} />
               );
             })}
           </div>

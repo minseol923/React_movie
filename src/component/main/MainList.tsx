@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
-import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
 import AttachEmailOutlinedIcon from "@mui/icons-material/AttachEmailOutlined";
 import CloudDownloadOutlinedIcon from "@mui/icons-material/CloudDownloadOutlined";

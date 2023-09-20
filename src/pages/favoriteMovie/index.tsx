@@ -1,17 +1,13 @@
 import React from "react";
 import ResultCard from "../../component/common/card";
+import { Divider, Chip } from "@mui/material";
 
 const FavoriteMovie = () => {
   return (
     <div>
-      <h2
-        style={{
-          backgroundColor: "red",
-          width: "100%",
-        }}
-      >
-        내 즐겨찾기
-      </h2>
+       <Divider>
+        <Chip label=" 내 즐겨찾기" />
+      </Divider>
       <ResultCard favorite={true} />
     </div>
   );

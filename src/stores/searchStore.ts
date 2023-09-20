@@ -3,6 +3,7 @@ import { atom } from "recoil";
 export type Pagination = {
   count: number;
   page: number;
+  
 };
 export type SearchResult = {
   Title: String;
@@ -12,6 +13,11 @@ export type SearchResult = {
   Poster: String;
 };
 
+// export type SearchKeywords = {
+//   searchText: String
+// };
+
+
 export const pagination = atom({
   key: "searchPagination",
   default: {
@@ -19,6 +25,13 @@ export const pagination = atom({
     page: 1,
   } as Pagination,
 });
+
+export const searchKeywords= atom({
+  key: "searchKeywords",
+  default: '' as String,
+});
+
+
 
 export const searchMovieList = atom({
   key: "searchMovieList",

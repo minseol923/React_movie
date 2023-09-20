@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import MovieIcon from '@mui/icons-material/Movie';
 import React from "react";
 
 export interface Props {
@@ -11,7 +12,8 @@ const Header = ({ type, title }: Props) => {
 
   return (
     <header style={{ justifyContent: "center" }}>
-      <div>영화 검색 페이지</div>
+     <MovieIcon style={{ marginRight: "6px" }} />
+      <div style={{fontWeight : "bold", fontSize:"20px"}}>영화 검색 페이지</div>
     </header>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ResultCard from "../../component/common/card";
-
-const SearchMovieCard = ({ responseType }) => {
+import { Divider, Chip } from "@mui/material";
+const SearchMovieCard = ( {responseType}  : any) => {
   return (
     <div
       style={{
@@ -15,7 +15,9 @@ const SearchMovieCard = ({ responseType }) => {
       {responseType === "True" ? (
         <ResultCard search={true} />
       ) : (
-        "검색결과가 없습니다."
+        <div>
+          검색결과가 없습니다.
+        </div>
       )}
     </div>
   );
