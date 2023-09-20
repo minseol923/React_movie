@@ -21,7 +21,7 @@ const MainList = (props: any) => {
           position: "fixed",
           bottom: 0,
           width: 1.0,
-          backgroundColor: "lightgray",
+          backgroundColor: "gray",
           zIndex: 1,
         }}
         onChange={(_event, newValue) => {
